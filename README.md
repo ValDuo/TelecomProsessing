@@ -1,23 +1,26 @@
 # TelecomProsessing
-A solution for Big Data Hack 2025 task.
+Проект, разработанный для Big Data Hack 2025.
 
-The task description:
-You are required to analyze the dataset stored in the /DATA folder on the cluster system or in the /DATA directory on HDFS. Alternatively, you can download it locally using this link: https://disk.yandex.ru/d/OIYpYJ1NUWXtYQ.
+Описание рабочего задания:
+Вам предлагается проанализировать датасет, аналогичный тому, который вы разбирали в предварительном задании и пробовали сгенерировать самостоятельно. Сам датасет можно найти на кластере в папке /DATA либо в в hdfs в папке /DATA либо скачать для работы локально по ссылке https://disk.yandex.ru/d/OIYpYJ1NUWXtYQ 
 
-The telecom100k dataset is provided for training purposes and includes a file with correct answers. However, your final analysis must be performed on the larger telecom1000k dataset, which contains one million records.
+Датасет telecom100k выложен для тренировки и содержит файл правильных ответов. Для работы вам понадобится большой датасет на миллион записей telecom1000k
 
-Your task is to generate a final list of hacked accounts using all available methods of big data processing. This list must be saved as a file with the following header:
+Используя любые подходящие инструменты вам необходимо получить список взломанных абонентов и сохранить его в виде таблицы с заголовком по шаблону:
 
 Id,UID,Type,IdPlan,TurnOn,Hacked,Traffic
 4490,1deb20d7-1f4d-4ea9-adcb-72e6a56df1d5,P,2,True,True,122472
 ...
+В качестве ответа Вам необходимо прикрепить файл result.csv с полученными результатами. Колонка абонентов должна иметь имя 'UID'.
 
-Your final answer must be published in a file named result.csv. The user identifier column must be named 'UID'.
+Файл result.csv должен содержать только записи, относящиеся к взломанным абонетнам. Других записей в файле быть не должно. Поля файла не должны содержать пропущенных значений.
 
-The result.csv file must contain only records related to hacked users; all other records must be omitted. No fields within the file can be empty.
+Внимание: система проверки критична к регистру имен файлов. Файл результата должен называться result.csv
 
-Results: 
-I gathered the 95.617529880478% of all hacked accounts using my SQL code.
+Метрика решения вычисляется по формуле (TP - K*FP) / (TP + FN), где TP - True Positive, FP - False Positive, FN - False Nagative, K - штрафной коэффициент. Для отрицательных значений метрика выдает нулевой результат
+
+Результат: 
+Было собрано 95.617529880478% верно найденных взломанных аккаунтов с помощью одного SQL запроса. Работа с разными типами файлов и объединением их в один выходной была проведена с использованием инструмента DuckDB.
 
 <img width="261" height="194" alt="image" src="https://github.com/user-attachments/assets/9df860ee-f040-48cd-9dda-16abd72deb17" />
 
