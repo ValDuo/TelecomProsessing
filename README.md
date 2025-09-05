@@ -18,5 +18,6 @@ The result.csv file must contain only records related to hacked users; all other
 
 Results: 
 I gathered the 95.617529880478% of all hacked accounts using my SQL code.
+
 <img width="261" height="194" alt="image" src="https://github.com/user-attachments/assets/9df860ee-f040-48cd-9dda-16abd72deb17" />
 
