@@ -1,5 +1,6 @@
 # TelecomProsessing
 A solution for Big Data Hack 2025 task.
+
 The task description:
 You are required to analyze the dataset stored in the /DATA folder on the cluster system or in the /DATA directory on HDFS. Alternatively, you can download it locally using this link: https://disk.yandex.ru/d/OIYpYJ1NUWXtYQ.
 
