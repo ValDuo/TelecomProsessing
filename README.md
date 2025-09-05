@@ -15,3 +15,8 @@ Id,UID,Type,IdPlan,TurnOn,Hacked,Traffic
 Your final answer must be published in a file named result.csv. The user identifier column must be named 'UID'.
 
 The result.csv file must contain only records related to hacked users; all other records must be omitted. No fields within the file can be empty.
+
+Results: 
+I gathered the 95.617529880478% of all hacked accounts using my SQL code.
+<img width="261" height="194" alt="image" src="https://github.com/user-attachments/assets/9df860ee-f040-48cd-9dda-16abd72deb17" />
+
